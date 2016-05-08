@@ -10,6 +10,18 @@
 </head>
 
 <body style="background-color: #330000;">
+
+    <div id="fb-root"></div>
+    <script>
+        (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+    </script>
+
     <?php include_once("analyticstracking.php") ?>
 
     <div class="container">
@@ -41,7 +53,7 @@
         </div>
         <div class="row col-md-4">
             <iframe width="600" height="450" frameborder="0" style="border: 0;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3051.3155235802387!2d-88.17989830000002!3d40.112971399999985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880cd7e9a1b34a19%3A0x45cf72d23421a92b!2s2112+E+Main+St%2C+Urbana%2C+IL+61802!5e0!3m2!1sen!2sus!4v1460042464653"
-            allowfullscreen></iframe>
+                allowfullscreen></iframe>
         </div>
         <div class="row col-md-12" style="color: #ffcc33;">
             <h3>Subscribe to our newsletter for the latest on our seasonal offerings and special events.</h3>
@@ -51,7 +63,7 @@
         <div class="row col-md-10" style="border:0 padding: 2px; background-color: #cc6600;">
             <form id="email_form" class="form" action="https://formspree.io/jajuanmint@mailinator.com" method="POST">
 
-                
+
                 <div class="form-group">
                     <label for="first_name" style="color: #ffcc33;">Name:</label>
                     <input type="text" class="form-control" name="full_name">
@@ -75,14 +87,34 @@
         </div>
         <br>
         <br>
-        <div class="row col-md-12">
-            <a href="http://www.facebook.com/donutdelights">Facebook/donutdelights</a>
-            <br>
-            <a href="http://www.twitter.com/donutdelights">twitter/donutdelights</a>
-            <br>
-            <a href="http://www.instagram.com/donutdelights">Instagram/donutdelights</a>
-            <br>
-            <a href="http://www.plus.google.com">Google+</a>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="col-md-4 col-md-offset-1">
+                    <img src="img\vetsAdSmall.gif" alt="VetSupport" ;>
+                </div>
+                <div class="col-md-5">
+
+                    <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Ffacebook.com%2Fdonutdelights&layout=button_count&mobile_iframe=true&width=86&height=20&appId"
+                        width="86" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+
+                    <script>
+                        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+                    </script>
+                    <g:plusone></g:plusone>
+
+                    <a href="http://twitter.com/share" class="twitter-share-button" data-count="vertical" data-via="YourSite">Tweet</a>
+
+                    <a href="http://www.reddit.com/submit" onclick="window.location = 'http://www.reddit.com/submit?url=' + encodeURIComponent(window.location); return false">
+                        <img src="http://www.reddit.com/static/spreddit7.gif" alt="submit to reddit" border="0" /> </a>
+
+                    <img src="http://l.yimg.com/hr/img/delicious.small.gif" height="10" width="10" alt="Delicious" />
+                    <a href="http://www.delicious.com/save" onclick="window.open('http://www.delicious.com/save?v=5&noui&jump=close&url='+encodeURIComponent(location.href)+'&title='+encodeURIComponent(document.title), 'delicious','toolbar=no,width=550,height=550'); return false;"> Bookmark this on Delicious</a>
+
+
+
+
+                </div>
+            </div>
         </div>
     </div>
 
