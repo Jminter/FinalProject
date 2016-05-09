@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
     $("#email_form").validate({
         rules: {
@@ -29,24 +29,51 @@ $(document).ready(function() {
             }
         }
     });
-    $("#Home").hover(function() {
+    $("#Home").hover(function () {
         $("#Home").css("background-color", "white")
-    },  function(){ // mouse-leave
-       $("#Home").css("background-color", "");
+    }, function () { // mouse-leave
+        $("#Home").css("background-color", "");
     });
-    $("#Menu").hover(function() {
+    $("#Menu").hover(function () {
         $("#Menu").css("background-color", "white")
-    },  function(){ // mouse-leave
-       $("#Menu").css("background-color", "");
+    }, function () { // mouse-leave
+        $("#Menu").css("background-color", "");
     });
-    $("#Contact").hover(function() {
+    $("#Contact").hover(function () {
         $("#Contact").css("background-color", "white")
-    },  function(){ // mouse-leave
-       $("#Contact").css("background-color", "");
+    }, function () { // mouse-leave
+        $("#Contact").css("background-color", "");
     });
-    $("#AboutUs").hover(function() {
+    $("#AboutUs").hover(function () {
         $("#AboutUs").css("background-color", "white")
-    },  function(){ // mouse-leave
-       $("#AboutUs").css("background-color", "");
+    }, function () { // mouse-leave
+        $("#AboutUs").css("background-color", "");
     });
+
+
+    $(window).load(function () {
+        var pages = $('#container9 li'), current = 0;
+        var currentPage, nextPage;
+
+        $('#container9 .button').click(function () {
+            currentPage = pages.eq(current);
+            if ($(this).hasClass('prevButton')) {
+
+                if (current <= 0)
+                    current = pages.length - 1;
+                else
+                    current = current - 1;
+            }
+            else {
+                if (current >= pages.length - 1)
+                    current = 0;
+                else
+                    current = current + 1;
+            }
+            nextPage = pages.eq(current);
+            currentPage.hide();
+            nextPage.show();
+        });
+    });
+
 });
